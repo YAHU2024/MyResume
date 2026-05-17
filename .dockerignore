@@ -1,0 +1,9 @@
+node_modules
+dist
+server/target
+server/.mvn
+.git
+.github
+*.md
+tmp
+.env.example

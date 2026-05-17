@@ -1,0 +1,43 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(docker pull *)",
+      "Bash(docker tag *)",
+      "Bash(docker rmi *)",
+      "Bash(docker-compose -p pairesume build backend)",
+      "Bash(docker-compose -p pairesume build frontend)",
+      "Bash(docker-compose -p pairesume up -d)",
+      "Bash(docker-compose -p pairesume ps)",
+      "Bash(curl -s http://localhost:8084/api/health)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3001/)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3001/api/health)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8084/api/swagger-ui.html)",
+      "Bash(curl -s http://localhost:8084/api/auth/login -H \"Content-Type: application/json\" -d '{\"email\":\"test@example.com\",\"password\":\"Test123456\"}')",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8084/api/doc.html)",
+      "Bash(docker-compose up *)",
+      "Bash(docker-compose ps *)",
+      "WebFetch(domain:registry.npmjs.org)",
+      "Bash(find /c/Users/YaHu/AppData/Local/npm-cache -path \"*pdfjs-dist*\" -type f 2>/dev/null | head -30 || echo \"npm cache not found, trying other locations...\" ; ls ~/.npm/_cacache/content-v2/ 2>/dev/null | head -5 || echo \"No .npm cache found\")",
+      "Read(//c/Users/YaHu/AppData/Local/npm-cache/**)",
+      "Read(//c/Users/YaHu/.npm/_cacache/**)",
+      "Bash(npm view *)",
+      "Bash(npm pack *)",
+      "Bash(curl -s \"https://cdn.jsdelivr.net/npm/pdfjs-dist@4.10.38/types/src/display/worker_options.d.ts\")",
+      "Bash(curl -s \"https://unpkg.com/pdfjs-dist@4.10.38/types/src/display/worker_options.d.ts\")",
+      "Bash(curl -s \"https://cdn.jsdelivr.net/npm/pdfjs-dist@4.10.38/types/src/pdf.d.ts\")",
+      "Bash(curl -s \"https://cdn.jsdelivr.net/npm/pdfjs-dist@4.10.38/types/src/display/api.d.ts\")",
+      "Bash(python3 -c \"import json,sys; data=json.load\\(sys.stdin\\); files=[f['path'] for f in data[0]['files'] if f['path'].startswith\\('build/'\\)]; [print\\(f\\) for f in sorted\\(files\\)]\")",
+      "Bash(npx --yes node -e \"const d=require\\('fs'\\).readFileSync\\('/dev/stdin','utf8'\\); const j=JSON.parse\\(d\\); const b=j[0].files.filter\\(f=>f.path.startsWith\\('build/'\\)\\); b.forEach\\(f=>console.log\\(f.path\\)\\)\")",
+      "Bash(curl -s \"https://cdn.jsdelivr.net/npm/pdfjs-dist@4.10.38/build/pdf.worker.min.mjs\")",
+      "Bash(curl -s \"https://cdn.jsdelivr.net/npm/pdfjs-dist@4.10.38/build/pdf.min.mjs\")",
+      "Bash(curl -s \"https://cdn.jsdelivr.net/npm/pdfjs-dist@4.10.38/package.json\")",
+      "Bash(curl -s \"https://cdn.jsdelivr.net/npm/pdfjs-dist@5.7.284/package.json\")",
+      "Bash(curl -s \"https://cdn.jsdelivr.net/npm/pdfjs-dist@5.7.284/types/src/display/worker_options.d.ts\")",
+      "Bash(grep -i -E '\\(\\\\.js$|inline|setup|worker\\)')",
+      "Bash(grep '\\\\.js$')",
+      "Bash(curl -s \"https://cdn.jsdelivr.net/npm/pdfjs-dist@4.10.38/build/pdf.worker.mjs\")",
+      "Bash(grep -i '\\\\.js$')",
+      "Bash(grep -c '\\\\.js$')"
+    ]
+  }
+}
